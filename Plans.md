@@ -34,14 +34,14 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 3.1 | Create OpenAI-compatible streaming endpoint | SSE format, server-sent events | 2.2 | cc:TODO |
-| 3.2 | Implement proxy to upstream LLM APIs | Timeout, retry logic, error handling | 3.1 | cc:TODO |
-| 3.3 | Add request/response transformation | Body manipulation middleware | 2.3 | cc:TODO |
-| 3.4 | Support multiple API keys per tenant | API key validation, quota tracking | 2.2 | cc:TODO |
-| 3.5 | Implement call forwarding with auth | Forward headers, sign requests | 3.2 | cc:TODO |
-| 3.6 | Design PostgreSQL schema (tenants, api_keys, usage) | Tables with indexes | 1.6 | cc:TODO |
-| 3.7 | Implement tenant model with GORM | CRUD operations, soft delete | 3.6 | cc:TODO |
-| 3.8 | Add usage tracking and quota enforcement | Token counters, daily limits | 3.7 | cc:TODO |
+| 3.1 | Create OpenAI-compatible streaming endpoint | SSE format, server-sent events | 2.2 | cc:done [f265459] |
+| 3.2 | Implement proxy to upstream LLM APIs | Timeout, retry logic, error handling | 3.1 | cc:done [f265459] |
+| 3.3 | Add request/response transformation | Body manipulation middleware | 2.3 | cc:done [f265459] |
+| 3.4 | Support multiple API keys per tenant | API key validation, quota tracking | 2.2 | cc:done [f265459] |
+| 3.5 | Implement call forwarding with auth | Forward headers, sign requests | 3.2 | cc:done [f265459] |
+| 3.6 | Design PostgreSQL schema (tenants, api_keys, usage) | Tables with indexes | 1.6 | cc:done [f265459] |
+| 3.7 | Implement tenant model with GORM | CRUD operations, soft delete | 3.6 | cc:done [f265459] |
+| 3.8 | Add usage tracking and quota enforcement | Token counters, daily limits | 3.7 | cc:done [f265459] |
 
 ---
 
