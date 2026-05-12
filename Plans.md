@@ -21,12 +21,12 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 2.1 | Implement Redis distributed rate limiter | Token bucket with sliding window | 1.5 | cc:TODO |
-| 2.2 | Create middleware for rate limit enforcement | 429 response when exceeded | 2.1 | cc:TODO |
-| 2.3 | Add request ID propagation middleware | Trace ID in headers and logs | 1.3 | cc:TODO |
-| 2.4 | Implement CORS and security headers | OWASP recommendations | 2.3 | cc:TODO |
-| 2.5 | Add circuit breaker for upstream LLM calls | Fallback on 50% failure rate, 30s reset | 1.2 | cc:TODO |
-| 2.6 | Implement HTTP connection pooling | Configurable pool size for upstream | 2.5 | cc:TODO |
+| 2.1 | Implement Redis distributed rate limiter | Token bucket with sliding window | 1.5 | cc:done [721e5a0] |
+| 2.2 | Create middleware for rate limit enforcement | 429 response when exceeded | 2.1 | cc:done [721e5a0] |
+| 2.3 | Add request ID propagation middleware | Trace ID in headers and logs | 1.3 | cc:done [721e5a0] |
+| 2.4 | Implement CORS and security headers | OWASP recommendations | 2.3 | cc:done [721e5a0] |
+| 2.5 | Add circuit breaker for upstream LLM calls | Fallback on 50% failure rate, 30s reset | 1.2 | cc:done [721e5a0] |
+| 2.6 | Implement HTTP connection pooling | Configurable pool size for upstream | 2.5 | cc:done [721e5a0] |
 
 ---
 
