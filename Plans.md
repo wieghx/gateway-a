@@ -8,7 +8,7 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 1.1 | Initialize Go module with proper structure | Module init, vendor dirs, go.sum | - | cc:TODO |
+| 1.1 | Initialize Go module with proper structure | Module init, vendor dirs, go.sum | - | cc:done [1579e26] |
 | 1.2 | Set up Hertz server with basic router | Health endpoint responds 200 OK | - | cc:done [1579e26] |
 | 1.3 | Configure structured logging (zap) | Logs with request ID, timestamp | 1.2 | cc:done [effaa50] |
 | 1.4 | Add config management (viper) | ENV + YAML config support | - | cc:done [538194a] |
