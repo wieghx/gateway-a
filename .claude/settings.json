@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allowDirs": [
+      "/home/gu/github.com/gateway-a"
+    ],
+    "denyTools": [],
+    "allowTools": [
+      "Bash",
+      "Read",
+      "Glob",
+      "Grep",
+      "Edit",
+      "Write",
+      "Agent",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "sandbox": null,
+  "env": {}
+}
