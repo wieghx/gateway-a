@@ -19,3 +19,7 @@ out/
 !.claude/skills/
 !.claude/settings.json
 # ---- Harness managed end ----
+
+# Compiled binaries
+gateway-a
+*.exe
