@@ -1,0 +1,619 @@
+{
+  "version": "2.0.0",
+  "legacy_version": "1.0.0",
+  "artifactType": "structured-handoff",
+  "timestamp": "2026-05-12T08:07:47Z",
+  "sessionId": "",
+  "previous_state": {
+    "summary": "Before compaction: 9 recent edit(s)",
+    "plan_counts": {
+      "total": 37,
+      "wip": 0,
+      "blocked": 0,
+      "recent_edits": 9
+    }
+  },
+  "next_action": {
+    "summary": "Continue 4.1 Design task queue schema (Redis)",
+    "taskId": "4.1",
+    "task": "Design task queue schema (Redis)",
+    "dod": "Job table, status enum, TTL",
+    "depends": "-",
+    "status": "cc:TODO",
+    "source": "Plans.md",
+    "priority": "normal"
+  },
+  "open_risks": [
+    {
+      "severity": "medium",
+      "kind": "verification",
+      "summary": "9 recent edit(s) should be re-validated after resume",
+      "detail": ".claude/state/changed-files.jsonl, .claude/state/cursor-notification.md, .claude/state/memory-bridge-events.jsonl, .claude/state/plans-state.json, .claude/state/pm-notification.md"
+    }
+  ],
+  "failed_checks": null,
+  "decision_log": [
+    {
+      "timestamp": "2026-05-12T08:07:47Z",
+      "actor": "pre-compact-save",
+      "decision": "canonical_handoff_artifact_written",
+      "rationale": "Persist a stable JSON artifact in .claude/state for long-running session handoff."
+    },
+    {
+      "timestamp": "2026-05-12T08:07:47Z",
+      "actor": "pre-compact-save",
+      "decision": "legacy_snapshot_mirrored",
+      "rationale": "Keep precompact-snapshot.json for backward compatibility with older hooks."
+    },
+    {
+      "timestamp": "2026-05-12T08:07:47Z",
+      "actor": "pre-compact-save",
+      "decision": "next_action_selected",
+      "rationale": "Continue 4.1 Design task queue schema (Redis) (source: Plans.md)"
+    }
+  ],
+  "context_reset": {
+    "policy": {
+      "mode": "auto",
+      "dryRun": false,
+      "thresholds": {
+        "wipTasks": 4,
+        "blockedTasks": 1,
+        "recentEdits": 8,
+        "failedChecks": 1,
+        "sessionAgeMinutes": 120
+      }
+    },
+    "recommended": true,
+    "summary": "Context reset recommended (auto): 9 recent edit count exceed threshold 8",
+    "reasons": [
+      "9 recent edit count exceed threshold 8"
+    ],
+    "candidates": [
+      {
+        "key": "wip_tasks",
+        "label": "WIP task count",
+        "actual": 0,
+        "threshold": 4,
+        "triggered": false
+      },
+      {
+        "key": "blocked_tasks",
+        "label": "blocked task count",
+        "actual": 0,
+        "threshold": 1,
+        "triggered": false
+      },
+      {
+        "key": "recent_edits",
+        "label": "recent edit count",
+        "actual": 9,
+        "threshold": 8,
+        "triggered": true
+      },
+      {
+        "key": "failed_checks",
+        "label": "failed check count",
+        "actual": 0,
+        "threshold": 1,
+        "triggered": false
+      },
+      {
+        "key": "session_age_minutes",
+        "label": "session age (minutes)",
+        "actual": 0,
+        "threshold": 120,
+        "triggered": false
+      }
+    ],
+    "counters": {
+      "wipTasks": 0,
+      "blockedTasks": 0,
+      "recentEdits": 9,
+      "failedChecks": 0,
+      "sessionAgeMinutes": null
+    }
+  },
+  "continuity": {
+    "plugin_first_workflow": true,
+    "resume_aware_effort_continuity": true,
+    "effort_hint": "medium",
+    "summary": "plugin-first workflow: enabled; resume-aware effort continuity: medium; next_task=4.1"
+  },
+  "planItems": [
+    {
+      "taskId": "4.1",
+      "title": "Design task queue schema (Redis)",
+      "dod": "Job table, status enum, TTL",
+      "depends": "-",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "4.2",
+      "title": "Implement job enqueue API",
+      "dod": "Push to queue, return job ID",
+      "depends": "3.5",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "4.3",
+      "title": "Create worker pool with concurrency control",
+      "dod": "Configurable worker count",
+      "depends": "4.2",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "4.4",
+      "title": "Add job status polling endpoint",
+      "dod": "GET /jobs/{id}, real-time status",
+      "depends": "4.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "4.5",
+      "title": "Implement pub/sub for task events",
+      "dod": "Redis pubsub, WebSocket notifications",
+      "depends": "4.4",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "4.6",
+      "title": "Add retry and dead-letter queue",
+      "dod": "Max retries, DLQ for failures",
+      "depends": "4.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.1",
+      "title": "Set up WasmEdge runtime integration",
+      "dod": "Can load and execute .wasm",
+      "depends": "1.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.2",
+      "title": "Define plugin SDK (Go)",
+      "dod": "Request/Response interfaces",
+      "depends": "5.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.3",
+      "title": "Implement plugin hot-reload",
+      "dod": "File watcher, graceful reload",
+      "depends": "5.2",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.4",
+      "title": "Create plugin lifecycle hooks",
+      "dod": "OnRequest, OnResponse, OnError",
+      "depends": "5.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.5",
+      "title": "Build example plugin (request transform)",
+      "dod": "Sample plugin loads and works",
+      "depends": "5.4",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.6",
+      "title": "Add plugin config isolation",
+      "dod": "Per-plugin config in YAML",
+      "depends": "5.5",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "5.7",
+      "title": "Implement plugin signature verification",
+      "dod": "Verify plugin authenticity before load",
+      "depends": "5.5",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "6.1",
+      "title": "Integrate Prometheus metrics",
+      "dod": "Request count, latency, errors",
+      "depends": "2.2",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "6.2",
+      "title": "Add Jaeger distributed tracing",
+      "dod": "Span context propagation",
+      "depends": "2.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "6.3",
+      "title": "Create metrics dashboard (Grafana)",
+      "dod": "5 core dashboards",
+      "depends": "6.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "6.4",
+      "title": "Implement health check endpoints",
+      "dod": "/health, /ready, /metrics",
+      "depends": "6.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "6.5",
+      "title": "Add structured alerting rules",
+      "dod": "CPU, memory, error rate alerts",
+      "depends": "6.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "6.6",
+      "title": "Add business metrics (token usage, cost)",
+      "dod": "Per-tenant billing metrics",
+      "depends": "3.8",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.1",
+      "title": "Write multi-stage Dockerfile",
+      "dod": "\u003c200MB image, production-ready",
+      "depends": "1.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.2",
+      "title": "Create Docker Compose for local dev",
+      "dod": "Hertz + Redis + Jaeger + Grafana",
+      "depends": "7.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.3",
+      "title": "Write Kubernetes Deployment manifest",
+      "dod": "Deploy, service, configmap",
+      "depends": "7.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.4",
+      "title": "Add Kubernetes HPA config",
+      "dod": "Auto-scale based on CPU",
+      "depends": "7.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.5",
+      "title": "Create K8s ServiceMonitor (Prometheus)",
+      "dod": "Scrape metrics from pods",
+      "depends": "6.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.6",
+      "title": "Write K8s Ingress config",
+      "dod": "TLS, rate limiting at ingress",
+      "depends": "7.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.7",
+      "title": "Configure K8s Secrets for sensitive data",
+      "dod": "LLM API keys, DB credentials",
+      "depends": "7.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "7.8",
+      "title": "Add graceful shutdown configuration",
+      "dod": "Connection draining, termination handler",
+      "depends": "7.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "8.1",
+      "title": "Write unit tests for core packages",
+      "dod": "80% coverage on middleware",
+      "depends": "All phases",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "8.2",
+      "title": "Integration tests with Docker containers",
+      "dod": "E2E test suite passes",
+      "depends": "7.2",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "8.3",
+      "title": "API documentation (OpenAPI/Swagger)",
+      "dod": "All endpoints documented",
+      "depends": "3.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "8.4",
+      "title": "Write deployment runbook",
+      "dod": "Step-by-step K8s deployment",
+      "depends": "7.6",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "8.5",
+      "title": "Plugin development guide",
+      "dod": "SDK docs, example plugins",
+      "depends": "5.6",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "9.1",
+      "title": "Load testing with k6",
+      "dod": "10k concurrent connections",
+      "depends": "3.5",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "9.2",
+      "title": "Security scan (trivy, gosec)",
+      "dod": "No critical vulnerabilities",
+      "depends": "8.1",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "9.3",
+      "title": "Add rate limiting by IP + API key",
+      "dod": "Per-client limits work correctly",
+      "depends": "2.2",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "9.4",
+      "title": "Implement request validation",
+      "dod": "Input sanitization, schema check",
+      "depends": "3.3",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    },
+    {
+      "taskId": "9.5",
+      "title": "Add audit logging",
+      "dod": "All admin actions logged",
+      "depends": "2.4",
+      "status": "cc:TODO",
+      "tags": {
+        "todo": true,
+        "wip": false,
+        "blocked": false
+      }
+    }
+  ],
+  "wipTasks": [
+    "Design task queue schema (Redis)",
+    "Implement job enqueue API",
+    "Create worker pool with concurrency control",
+    "Add job status polling endpoint",
+    "Implement pub/sub for task events",
+    "Add retry and dead-letter queue",
+    "Set up WasmEdge runtime integration",
+    "Define plugin SDK (Go)",
+    "Implement plugin hot-reload",
+    "Create plugin lifecycle hooks",
+    "Build example plugin (request transform)",
+    "Add plugin config isolation",
+    "Implement plugin signature verification",
+    "Integrate Prometheus metrics",
+    "Add Jaeger distributed tracing",
+    "Create metrics dashboard (Grafana)",
+    "Implement health check endpoints",
+    "Add structured alerting rules",
+    "Add business metrics (token usage, cost)",
+    "Write multi-stage Dockerfile",
+    "Create Docker Compose for local dev",
+    "Write Kubernetes Deployment manifest",
+    "Add Kubernetes HPA config",
+    "Create K8s ServiceMonitor (Prometheus)",
+    "Write K8s Ingress config",
+    "Configure K8s Secrets for sensitive data",
+    "Add graceful shutdown configuration",
+    "Write unit tests for core packages",
+    "Integration tests with Docker containers",
+    "API documentation (OpenAPI/Swagger)",
+    "Write deployment runbook",
+    "Plugin development guide",
+    "Load testing with k6",
+    "Security scan (trivy, gosec)",
+    "Add rate limiting by IP + API key",
+    "Implement request validation",
+    "Add audit logging"
+  ],
+  "recentEdits": [
+    ".claude/state/changed-files.jsonl",
+    ".claude/state/cursor-notification.md",
+    ".claude/state/memory-bridge-events.jsonl",
+    ".claude/state/plans-state.json",
+    ".claude/state/pm-notification.md",
+    ".claude/state/test-recommendation.json",
+    ".claude/state/worktree-info.json",
+    "internal/metrics/prometheus.go",
+    "pkg/queue/queue.go"
+  ]
+}

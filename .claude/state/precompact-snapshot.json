@@ -1,0 +1,126 @@
+{
+  "artifactType": "precompact-snapshot",
+  "context_reset": {
+    "policy": {
+      "mode": "auto",
+      "dryRun": false,
+      "thresholds": {
+        "wipTasks": 4,
+        "blockedTasks": 1,
+        "recentEdits": 8,
+        "failedChecks": 1,
+        "sessionAgeMinutes": 120
+      }
+    },
+    "recommended": true,
+    "summary": "Context reset recommended (auto): 9 recent edit count exceed threshold 8",
+    "reasons": [
+      "9 recent edit count exceed threshold 8"
+    ],
+    "candidates": [
+      {
+        "key": "wip_tasks",
+        "label": "WIP task count",
+        "actual": 0,
+        "threshold": 4,
+        "triggered": false
+      },
+      {
+        "key": "blocked_tasks",
+        "label": "blocked task count",
+        "actual": 0,
+        "threshold": 1,
+        "triggered": false
+      },
+      {
+        "key": "recent_edits",
+        "label": "recent edit count",
+        "actual": 9,
+        "threshold": 8,
+        "triggered": true
+      },
+      {
+        "key": "failed_checks",
+        "label": "failed check count",
+        "actual": 0,
+        "threshold": 1,
+        "triggered": false
+      },
+      {
+        "key": "session_age_minutes",
+        "label": "session age (minutes)",
+        "actual": 0,
+        "threshold": 120,
+        "triggered": false
+      }
+    ],
+    "counters": {
+      "wipTasks": 0,
+      "blockedTasks": 0,
+      "recentEdits": 9,
+      "failedChecks": 0,
+      "sessionAgeMinutes": null
+    }
+  },
+  "continuity": {
+    "plugin_first_workflow": true,
+    "resume_aware_effort_continuity": true,
+    "effort_hint": "medium",
+    "summary": "plugin-first workflow: enabled; resume-aware effort continuity: medium; next_task=4.1"
+  },
+  "legacy_version": "1.0.0",
+  "metrics": null,
+  "recentEdits": [
+    ".claude/state/changed-files.jsonl",
+    ".claude/state/cursor-notification.md",
+    ".claude/state/memory-bridge-events.jsonl",
+    ".claude/state/plans-state.json",
+    ".claude/state/pm-notification.md",
+    ".claude/state/test-recommendation.json",
+    ".claude/state/worktree-info.json",
+    "internal/metrics/prometheus.go",
+    "pkg/queue/queue.go"
+  ],
+  "sessionId": "",
+  "timestamp": "2026-05-12T08:07:47Z",
+  "version": "1.0.0",
+  "wipTasks": [
+    "Design task queue schema (Redis)",
+    "Implement job enqueue API",
+    "Create worker pool with concurrency control",
+    "Add job status polling endpoint",
+    "Implement pub/sub for task events",
+    "Add retry and dead-letter queue",
+    "Set up WasmEdge runtime integration",
+    "Define plugin SDK (Go)",
+    "Implement plugin hot-reload",
+    "Create plugin lifecycle hooks",
+    "Build example plugin (request transform)",
+    "Add plugin config isolation",
+    "Implement plugin signature verification",
+    "Integrate Prometheus metrics",
+    "Add Jaeger distributed tracing",
+    "Create metrics dashboard (Grafana)",
+    "Implement health check endpoints",
+    "Add structured alerting rules",
+    "Add business metrics (token usage, cost)",
+    "Write multi-stage Dockerfile",
+    "Create Docker Compose for local dev",
+    "Write Kubernetes Deployment manifest",
+    "Add Kubernetes HPA config",
+    "Create K8s ServiceMonitor (Prometheus)",
+    "Write K8s Ingress config",
+    "Configure K8s Secrets for sensitive data",
+    "Add graceful shutdown configuration",
+    "Write unit tests for core packages",
+    "Integration tests with Docker containers",
+    "API documentation (OpenAPI/Swagger)",
+    "Write deployment runbook",
+    "Plugin development guide",
+    "Load testing with k6",
+    "Security scan (trivy, gosec)",
+    "Add rate limiting by IP + API key",
+    "Implement request validation",
+    "Add audit logging"
+  ]
+}

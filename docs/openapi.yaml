@@ -1,0 +1,731 @@
+openapi: 3.0.3
+info:
+  title: Gateway-A API
+  description: |
+    AI Gateway API providing LLM proxying, task queue management, and metrics endpoints.
+
+    The Gateway-A is a high-performance API gateway for LLM services with:
+    - LLM streaming support (OpenAI-compatible)
+    - Async task queue for background jobs
+    - Prometheus metrics
+    - Rate limiting and circuit breaker protection
+    - Multi-tenant support with quota management
+  version: 1.0.0
+  contact:
+    name: Gateway-A Support
+    email: support@gateway-a.example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+  - url: https://api.gateway-a.example.com
+    description: Production server
+
+tags:
+  - name: LLM
+    description: LLM proxying and chat completion endpoints
+  - name: Queue
+    description: Async task queue management endpoints
+  - name: Metrics
+    description: Prometheus metrics endpoint
+  - name: Health
+    description: Health check and status endpoints
+
+# ==================== PATHS ====================
+
+paths:
+  /health:
+    get:
+      tags:
+        - Health
+      summary: Health check
+      description: Check if the gateway service is healthy and responding
+      operationId: healthCheck
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+        '503':
+          description: Service is unhealthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+  /:
+    get:
+      tags:
+        - Health
+      summary: Root endpoint
+      description: Get basic service information
+      operationId: rootEndpoint
+      responses:
+        '200':
+          description: Service information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceInfo'
+
+  /v1/chat/completions:
+    post:
+      tags:
+        - LLM
+      summary: Chat completion (streaming)
+      description: |
+        Create chat completion with streaming support.
+        This endpoint proxies requests to upstream LLM providers.
+
+        Supports both streaming (SSE) and non-streaming responses.
+      operationId: chatCompletion
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatCompletionRequest'
+      responses:
+        '200':
+          description: Successful completion
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatCompletionResponse'
+            text/event-stream:
+              schema:
+                $ref: '#/components/schemas/ChatCompletionStreamChunk'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          headers:
+            Retry-After:
+              schema:
+                type: integer
+                description: Seconds to wait before retrying
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+            X-RateLimit-Reset:
+              schema:
+                type: integer
+        '502':
+          description: Upstream service error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-examples:
+        streaming:
+          model: gpt-4
+          messages:
+            - role: user
+              content: "Hello, how are you?"
+          stream: true
+        non-streaming:
+          model: gpt-4
+          messages:
+            - role: user
+              content: "Hello, how are you?"
+          stream: false
+
+  /v1/queue/enqueue:
+    post:
+      tags:
+        - Queue
+      summary: Enqueue a job
+      description: |
+        Add a new job to the task queue.
+        Jobs are processed asynchronously by worker pools.
+      operationId: enqueueJob
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnqueueRequest'
+      responses:
+        '200':
+          description: Job enqueued successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnqueueResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Queue service error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-examples:
+        basic:
+          job_type: token_calculation
+          payload:
+            model: gpt-4
+            prompt: "Summarize the following text..."
+          queue: default
+          max_retries: 3
+        with_timeout:
+          job_type: usage_tracking
+          payload:
+            tenant_id: 123
+            model: gpt-4
+            tokens: 100
+          queue: high_priority
+          max_retries: 5
+          timeout: 60s
+
+  /v1/queue/jobs:
+    get:
+      tags:
+        - Queue
+      summary: List jobs
+      description: List jobs in a queue (pending jobs)
+      operationId: listJobs
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - name: queue
+          in: query
+          required: false
+          description: Queue name to filter jobs
+          schema:
+            type: string
+            default: default
+      responses:
+        '200':
+          description: List of jobs
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListJobsResponse'
+
+  /v1/queue/jobs/{job_id}:
+    get:
+      tags:
+        - Queue
+      summary: Get job status
+      description: Get the status and details of a specific job
+      operationId: getJobStatus
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          description: Job ID to retrieve
+          schema:
+            type: string
+            example: job_1234567890
+        - name: queue
+          in: path
+          required: false
+          description: Queue name (defaults to the queue the job was enqueued to)
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Job status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobStatusResponse'
+        '404':
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /v1/queue/stats:
+    get:
+      tags:
+        - Queue
+      summary: Get queue statistics
+      description: Get statistics about queue workers and pending jobs
+      operationId: getQueueStats
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Queue statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueueStatsResponse'
+
+  /metrics:
+    get:
+      tags:
+        - Metrics
+      summary: Prometheus metrics
+      description: |
+        Prometheus metrics endpoint.
+        Returns metrics in text format for scraping by Prometheus.
+      operationId: getMetrics
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain; version=0.0.4:
+              schema:
+                type: string
+                description: Prometheus metrics format
+          examples:
+            default:
+              value: |
+                # HELP gateway_a_requests_total Total number of requests
+                # TYPE gateway_a_requests_total counter
+                gateway_a_requests_total{endpoint="/health",method="GET",status="200"} 150
+                # HELP gateway_a_llm_requests_total Total LLM requests
+                # TYPE gateway_a_llm_requests_total counter
+                gateway_a_llm_requests_total{model="gpt-4",provider="openai",status="success"} 1000
+                # HELP gateway_a_queue_jobs_enqueued_total Total jobs enqueued
+                # TYPE gateway_a_queue_jobs_enqueued_total counter
+                gateway_a_queue_jobs_enqueued_total{queue="default",job_type="token_calculation"} 500
+                # HELP gateway_a_rate_limit_exceeded_total Total rate limit exceeded events
+                # TYPE gateway_a_rate_limit_exceeded_total counter
+                gateway_a_rate_limit_exceeded_total{client="ip:192.168.1.1",limit_type="api"} 5
+
+# ==================== COMPONENTS ====================
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key authentication. Format: "Bearer <api_key>"
+
+  schemas:
+    # ==================== REQUESTS ====================
+
+    ChatCompletionRequest:
+      type: object
+      required:
+        - model
+        - messages
+      properties:
+        model:
+          type: string
+          description: The model to use for completion
+          example: gpt-4
+        messages:
+          type: array
+          description: List of messages for the conversation
+          items:
+            $ref: '#/components/schemas/Message'
+        stream:
+          type: boolean
+          description: Enable streaming response (SSE)
+          default: false
+          example: true
+        max_tokens:
+          type: integer
+          description: Maximum tokens to generate
+          example: 1000
+        temperature:
+          type: number
+          description: Sampling temperature
+          example: 0.7
+        top_p:
+          type: number
+          description: Nucleus sampling parameter
+          example: 1.0
+        frequency_penalty:
+          type: number
+          description: Frequency penalty
+          example: 0.0
+        presence_penalty:
+          type: number
+          description: Presence penalty
+          example: 0.0
+
+    Message:
+      type: object
+      required:
+        - role
+        - content
+      properties:
+        role:
+          type: string
+          enum:
+            - system
+            - user
+            - assistant
+          description: Message role
+        content:
+          type: string
+          description: Message content
+
+    EnqueueRequest:
+      type: object
+      required:
+        - job_type
+        - payload
+      properties:
+        job_type:
+          type: string
+          description: Type of job to process
+          enum:
+            - token_calculation
+            - usage_tracking
+            - llm_caching
+            - tenant_sync
+            - custom
+          example: token_calculation
+        payload:
+          type: object
+          description: Job-specific payload data
+          additionalProperties: true
+          example:
+            model: gpt-4
+            prompt: "Hello world"
+        queue:
+          type: string
+          description: Queue name (defaults to "default")
+          default: default
+          example: high_priority
+        max_retries:
+          type: integer
+          description: Maximum retry attempts
+          default: 3
+          example: 5
+        timeout:
+          type: string
+          description: Job timeout (e.g., "30s", "1m")
+          example: 60s
+
+    # ==================== RESPONSES ====================
+
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Health status
+          example: ok
+        service:
+          type: string
+          description: Service name
+          example: gateway-a-llm
+        version:
+          type: string
+          description: Service version
+          example: 1.0.0
+        uptime:
+          type: integer
+          description: Uptime in seconds
+          example: 3600
+
+    ServiceInfo:
+      type: object
+      properties:
+        service:
+          type: string
+          description: Service name
+          example: gateway-a
+        version:
+          type: string
+          description: Service version
+          example: 0.1.0
+
+    ChatCompletionResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Response ID
+          example: chatcmpl-123
+        object:
+          type: string
+          description: Response object type
+          example: chat.completion
+        model:
+          type: string
+          description: Model used
+          example: gpt-4
+        created:
+          type: integer
+          description: Unix timestamp
+          example: 1699912345
+        choices:
+          type: array
+          items:
+            $ref: '#/components/schemas/Choice'
+        usage:
+          $ref: '#/components/schemas/Usage'
+
+    Choice:
+      type: object
+      properties:
+        index:
+          type: integer
+          example: 0
+        message:
+          $ref: '#/components/schemas/Message'
+        finish_reason:
+          type: string
+          description: Reason completion finished
+          enum:
+            - stop
+            - length
+            - content_filter
+          example: stop
+
+    Usage:
+      type: object
+      properties:
+        prompt_tokens:
+          type: integer
+          description: Tokens in prompt
+          example: 50
+        completion_tokens:
+          type: integer
+          description: Tokens in completion
+          example: 100
+        total_tokens:
+          type: integer
+          description: Total tokens used
+          example: 150
+
+    ChatCompletionStreamChunk:
+      type: object
+      description: SSE stream chunk
+      properties:
+        id:
+          type: string
+        object:
+          type: string
+        model:
+          type: string
+        created:
+          type: integer
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              index:
+                type: integer
+              delta:
+                $ref: '#/components/schemas/Delta'
+              finish_reason:
+                type: string
+
+    Delta:
+      type: object
+      properties:
+        role:
+          type: string
+        content:
+          type: string
+
+    EnqueueResponse:
+      type: object
+      properties:
+        job_id:
+          type: string
+          description: Unique job identifier
+          example: job_1234567890
+        queue:
+          type: string
+          description: Queue name
+          example: default
+        status:
+          type: string
+          description: Job status
+          example: pending
+
+    JobStatusResponse:
+      type: object
+      properties:
+        job_id:
+          type: string
+          description: Job ID
+          example: job_1234567890
+        type:
+          type: string
+          description: Job type
+          example: token_calculation
+        payload:
+          type: object
+          description: Job payload
+          additionalProperties: true
+        status:
+          type: string
+          description: Job status
+          enum:
+            - pending
+            - running
+            - completed
+            - failed
+            - cancelled
+            - dead
+          example: pending
+        retries:
+          type: integer
+          description: Current retry count
+          example: 0
+        max_retries:
+          type: integer
+          description: Maximum retry attempts
+          example: 3
+        error:
+          type: string
+          description: Error message if failed
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          description: Job creation time
+        started_at:
+          type: string
+          format: date-time
+          description: Job start time
+          nullable: true
+        finished_at:
+          type: string
+          format: date-time
+          description: Job completion time
+          nullable: true
+
+    ListJobsResponse:
+      type: object
+      properties:
+        jobs:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobStatusResponse'
+        total:
+          type: integer
+          description: Total number of jobs
+          example: 100
+
+    QueueStatsResponse:
+      type: object
+      properties:
+        queue:
+          type: string
+          description: Queue name
+          example: default
+        active_workers:
+          type: integer
+          description: Number of active workers
+          example: 4
+        pending_jobs:
+          type: integer
+          description: Number of pending jobs
+          example: 5
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: "Rate limit exceeded"
+        code:
+          type: integer
+          description: HTTP status code
+          example: 429
+        retry_after:
+          type: integer
+          description: Seconds to wait before retrying
+          nullable: true
+        limit:
+          type: integer
+          description: Rate limit maximum
+          nullable: true
+        remaining:
+          type: integer
+          description: Remaining rate limit
+          nullable: true
+        reason:
+          type: string
+          description: Additional error reason
+          nullable: true
+        upstream:
+          type: string
+          description: Upstream URL for circuit breaker errors
+          nullable: true
+
+    # ==================== HEADERS ====================
+
+    headers:
+      X-RateLimit-Limit:
+        schema:
+          type: integer
+        description: Rate limit bucket size
+      X-RateLimit-Remaining:
+        schema:
+          type: integer
+        description: Remaining tokens in bucket
+      X-RateLimit-Reset:
+        schema:
+          type: integer
+          format: unix-time
+        description: Unix timestamp when bucket resets
+      Retry-After:
+        schema:
+          type: integer
+        description: Seconds to wait before retrying
+
+# ==================== SECURITY ====================
+
+x-metadata:
+  rate_limiting:
+    default:
+      rate: 10
+      window: 1m
+      bucket_size: 100
+    per_tenant: true
+    headers:
+      - X-RateLimit-Limit
+      - X-RateLimit-Remaining
+      - X-RateLimit-Reset
+
+  circuit_breaker:
+    failure_threshold: 50
+    reset_timeout: 30s
+    half_open_requests: 3
+
+  tenant_quota:
+    tracking: true
+    daily_limit: true
+    monthly_limit: true

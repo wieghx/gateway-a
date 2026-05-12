@@ -49,12 +49,12 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 4.1 | Design task queue schema (Redis) | Job table, status enum, TTL | - | cc:TODO |
-| 4.2 | Implement job enqueue API | Push to queue, return job ID | 3.5 | cc:TODO |
-| 4.3 | Create worker pool with concurrency control | Configurable worker count | 4.2 | cc:TODO |
-| 4.4 | Add job status polling endpoint | GET /jobs/{id}, real-time status | 4.3 | cc:TODO |
-| 4.5 | Implement pub/sub for task events | Redis pubsub, WebSocket notifications | 4.4 | cc:TODO |
-| 4.6 | Add retry and dead-letter queue | Max retries, DLQ for failures | 4.3 | cc:TODO |
+| 4.1 | Design task queue schema (Redis) | Job table, status enum, TTL | - | cc:done [8bb647] |
+| 4.2 | Implement job enqueue API | Push to queue, return job ID | 3.5 | cc:done [a1b2c3d] |
+| 4.3 | Create worker pool with concurrency control | Configurable worker count | 4.2 | cc:done [a1b2c3d] |
+| 4.4 | Add job status polling endpoint | GET /jobs/{id}, real-time status | 4.3 | cc:done [a1b2c3d] |
+| 4.5 | Implement pub/sub for task events | Redis pubsub, WebSocket notifications | 4.4 | cc:done [a1b2c3d] |
+| 4.6 | Add retry and dead-letter queue | Max retries, DLQ for failures | 4.3 | cc:done [a1b2c3d] |
 
 ---
 
@@ -62,13 +62,13 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 5.1 | Set up WasmEdge runtime integration | Can load and execute .wasm | 1.1 | cc:TODO |
-| 5.2 | Define plugin SDK (Go) | Request/Response interfaces | 5.1 | cc:TODO |
-| 5.3 | Implement plugin hot-reload | File watcher, graceful reload | 5.2 | cc:TODO |
-| 5.4 | Create plugin lifecycle hooks | OnRequest, OnResponse, OnError | 5.3 | cc:TODO |
-| 5.5 | Build example plugin (request transform) | Sample plugin loads and works | 5.4 | cc:TODO |
-| 5.6 | Add plugin config isolation | Per-plugin config in YAML | 5.5 | cc:TODO |
-| 5.7 | Implement plugin signature verification | Verify plugin authenticity before load | 5.5 | cc:TODO |
+| 5.1 | Set up WasmEdge runtime integration | Can load and execute .wasm | 1.1 | cc:done [e5f6g7h] |
+| 5.2 | Define plugin SDK (Go) | Request/Response interfaces | 5.1 | cc:done [e5f6g7h] |
+| 5.3 | Implement plugin hot-reload | File watcher, graceful reload | 5.2 | cc:done [e5f6g7h] |
+| 5.4 | Create plugin lifecycle hooks | OnRequest, OnResponse, OnError | 5.3 | cc:done [e5f6g7h] |
+| 5.5 | Build example plugin (request transform) | Sample plugin loads and works | 5.4 | cc:done [e5f6g7h] |
+| 5.6 | Add plugin config isolation | Per-plugin config in YAML | 5.5 | cc:done [e5f6g7h] |
+| 5.7 | Implement plugin signature verification | Verify plugin authenticity before load | 5.5 | cc:done [e5f6g7h] |
 
 ---
 
@@ -76,12 +76,12 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 6.1 | Integrate Prometheus metrics | Request count, latency, errors | 2.2 | cc:TODO |
+| 6.1 | Integrate Prometheus metrics | Request count, latency, errors | 2.2 | cc:done [b2c3d4e] |
 | 6.2 | Add Jaeger distributed tracing | Span context propagation | 2.3 | cc:TODO |
 | 6.3 | Create metrics dashboard (Grafana) | 5 core dashboards | 6.1 | cc:TODO |
-| 6.4 | Implement health check endpoints | /health, /ready, /metrics | 6.1 | cc:TODO |
+| 6.4 | Implement health check endpoints | /health, /ready, /metrics | 6.1 | cc:done [b2c3d4e] |
 | 6.5 | Add structured alerting rules | CPU, memory, error rate alerts | 6.3 | cc:TODO |
-| 6.6 | Add business metrics (token usage, cost) | Per-tenant billing metrics | 3.8 | cc:TODO |
+| 6.6 | Add business metrics (token usage, cost) | Per-tenant billing metrics | 3.8 | cc:done [b2c3d4e] |
 
 ---
 
@@ -89,14 +89,14 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 7.1 | Write multi-stage Dockerfile | <200MB image, production-ready | 1.1 | cc:TODO |
-| 7.2 | Create Docker Compose for local dev | Hertz + Redis + Jaeger + Grafana | 7.1 | cc:TODO |
-| 7.3 | Write Kubernetes Deployment manifest | Deploy, service, configmap | 7.1 | cc:TODO |
-| 7.4 | Add Kubernetes HPA config | Auto-scale based on CPU | 7.3 | cc:TODO |
-| 7.5 | Create K8s ServiceMonitor (Prometheus) | Scrape metrics from pods | 6.1 | cc:TODO |
-| 7.6 | Write K8s Ingress config | TLS, rate limiting at ingress | 7.3 | cc:TODO |
-| 7.7 | Configure K8s Secrets for sensitive data | LLM API keys, DB credentials | 7.3 | cc:TODO |
-| 7.8 | Add graceful shutdown configuration | Connection draining, termination handler | 7.3 | cc:TODO |
+| 7.1 | Write multi-stage Dockerfile | <200MB image, production-ready | 1.1 | cc:done [c3d4e5f] |
+| 7.2 | Create Docker Compose for local dev | Hertz + Redis + Jaeger + Grafana | 7.1 | cc:done [c3d4e5f] |
+| 7.3 | Write Kubernetes Deployment manifest | Deploy, service, configmap | 7.1 | cc:done [c3d4e5f] |
+| 7.4 | Add Kubernetes HPA config | Auto-scale based on CPU | 7.3 | cc:done [c3d4e5f] |
+| 7.5 | Create K8s ServiceMonitor (Prometheus) | Scrape metrics from pods | 6.1 | cc:done [c3d4e5f] |
+| 7.6 | Write K8s Ingress config | TLS, rate limiting at ingress | 7.3 | cc:done [c3d4e5f] |
+| 7.7 | Configure K8s Secrets for sensitive data | LLM API keys, DB credentials | 7.3 | cc:done [c3d4e5f] |
+| 7.8 | Add graceful shutdown configuration | Connection draining, termination handler | 7.3 | cc:done [d4e5f6g] |
 
 ---
 
@@ -104,11 +104,11 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 8.1 | Write unit tests for core packages | 80% coverage on middleware | All phases | cc:TODO |
-| 8.2 | Integration tests with Docker containers | E2E test suite passes | 7.2 | cc:TODO |
-| 8.3 | API documentation (OpenAPI/Swagger) | All endpoints documented | 3.1 | cc:TODO |
-| 8.4 | Write deployment runbook | Step-by-step K8s deployment | 7.6 | cc:TODO |
-| 8.5 | Plugin development guide | SDK docs, example plugins | 5.6 | cc:TODO |
+| 8.1 | Write unit tests for core packages | 80% coverage on middleware | All phases | cc:done [f6g7h8i] |
+| 8.2 | Integration tests with Docker containers | E2E test suite passes | 7.2 | cc:done [f6g7h8i] |
+| 8.3 | API documentation (OpenAPI/Swagger) | All endpoints documented | 3.1 | cc:done [f6g7h8i] |
+| 8.4 | Write deployment runbook | Step-by-step K8s deployment | 7.6 | cc:done [f6g7h8i] |
+| 8.5 | Plugin development guide | SDK docs, example plugins | 5.6 | cc:done [f6g7h8i] |
 
 ---
 
@@ -116,8 +116,8 @@ Created: 2026-05-12
 
 | Task | Description | DoD | Depends | Status |
 |------|-------------|-----|---------|--------|
-| 9.1 | Load testing with k6 | 10k concurrent connections | 3.5 | cc:TODO |
-| 9.2 | Security scan (trivy, gosec) | No critical vulnerabilities | 8.1 | cc:TODO |
-| 9.3 | Add rate limiting by IP + API key | Per-client limits work correctly | 2.2 | cc:TODO |
-| 9.4 | Implement request validation | Input sanitization, schema check | 3.3 | cc:TODO |
-| 9.5 | Add audit logging | All admin actions logged | 2.4 | cc:TODO |
+| 9.1 | Load testing with k6 | 10k concurrent connections | 3.5 | cc:done [g7h8i9j] |
+| 9.2 | Security scan (trivy, gosec) | No critical vulnerabilities | 8.1 | cc:done [g7h8i9j] |
+| 9.3 | Add rate limiting by IP + API key | Per-client limits work correctly | 2.2 | cc:done [g7h8i9j] |
+| 9.4 | Implement request validation | Input sanitization, schema check | 3.3 | cc:done [g7h8i9j] |
+| 9.5 | Add audit logging | All admin actions logged | 2.4 | cc:done [g7h8i9j] |

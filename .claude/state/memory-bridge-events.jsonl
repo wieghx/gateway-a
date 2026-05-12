@@ -404,3 +404,440 @@
 {"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:51:55Z"}
 {"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:06Z"}
 {"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:43Z"}
+{"event":"stop","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:46Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:52:48Z"}
+{"event":"user-prompt","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:55:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:56:07Z"}
+{"event":"stop","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:56:09Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:56:11Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T07:56:16Z"}
+{"event":"user-prompt","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:03:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:03:56Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:03:59Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a/{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:04:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a/{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:04:04Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:06:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:06:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:07:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:07:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:07:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:08:42Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:08:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:16Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:39Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:09:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:10:02Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:10:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:10:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:10:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:10:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:10:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:11:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:11:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:11:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:11:42Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:11:50Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:11:54Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:00Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:44Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:12:59Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:13:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:00Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:08Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:32Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:41Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:14:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:11Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:16Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:24Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:15:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:16:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:16:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:16:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:16:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:16:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:24Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:27Z"}
+{"event":"stop","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:36Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:17:43Z"}
+{"event":"user-prompt","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:18:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:16Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:31Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:19:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:20:39Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:20:44Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:21:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:21:24Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:21:37Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:21:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:22:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:22:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:22:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:22:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:22:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:22:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:08Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:13Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:50Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:23:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:24:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:25:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:25:44Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:25:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:25:53Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:25:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:00Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:11Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:31Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:42Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:56Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:26:59Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:27:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:27:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:27:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:32:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:32:42Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:32:50Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:32:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:33:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:33:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:33:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:34:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:34:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:34:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:34:56Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:34:59Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:24Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:32Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:35:54Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:16Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:36:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:37:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:37:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:37:11Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:37:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:37:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:55Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:37:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:38:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:39:36Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:39:36Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:40:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:42:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:42:36Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:43:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:45:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:46:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:16Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:47:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:48:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:48:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:48:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:48:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:49:00Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:49:13Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:49:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:49:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:49:27Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:51:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:51:37Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:51:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:51:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:51:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:37Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:41Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:53:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:09Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:44Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:54:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:18Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:39Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:55:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:56:04Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:56:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:56:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:56:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T08:56:56Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:31Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:58:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T08:59:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:00:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:00:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:00:33Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:01:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:01:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:01:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:01:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:01:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:01:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:02:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:02:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:02:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:02:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:02:09Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:03:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:03:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:03:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:03:57Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:04:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:04:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:04:04Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:04:42Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:05:32Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:05:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:07:02Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:07:08Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:13Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:32Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:39Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:41Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:08:50Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:09:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:09:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:09:54Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:09:57Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:04Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:09Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:21Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:23Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:28Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:37Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:39Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:10:57Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:13Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:24Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:11:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:12:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:12:09Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:12:12Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:12:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:12:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:12:48Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:13:01Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:22Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:25Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:34Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:38Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:41Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:51Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:54Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:14:57Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:00Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:06Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:08Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:10Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:13Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:16Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:32Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:35Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:37Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:45Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:50Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:56Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:15:58Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:04Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:07Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:13Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:15Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:28Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:30Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:36Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:40Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:43Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:16:56Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:03Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:08Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:11Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:14Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:17Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:19Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:26Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:29Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:31Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:39Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:42Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:46Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:49Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:52Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:17:59Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:18:02Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:18:08Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:18:09Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"{\"decision\":\"approve\",\"reason\":\"WorktreeCreate: initialized worktree state\"}","timestamp":"2026-05-12T09:18:11Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T09:18:20Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T09:18:47Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T09:18:54Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T09:19:00Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T09:19:05Z"}
+{"event":"post-tool-use","session_id":"5855ab6b-ba9f-4419-9e7f-f7a150f6baf8","cwd":"/home/gu/github.com/gateway-a","timestamp":"2026-05-12T09:19:07Z"}
