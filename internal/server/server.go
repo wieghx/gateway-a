@@ -9,11 +9,16 @@ import (
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/app/server"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
+	"github.com/gu/gateway-a/internal/handler"
+	"github.com/gu/gateway-a/middleware/connectionpool"
+	"github.com/gu/gateway-a/middleware/ratelimit"
+	"github.com/gu/gateway-a/middleware/requestid"
+	"github.com/gu/gateway-a/middleware/security"
 )
 
 type Server struct {
 	hertz      *server.Hertz
-	startTime  time.Time
+	llmHandler *handler.LLMHandler
 }
 
 func NewServer() *Server {
@@ -23,12 +28,27 @@ func NewServer() *Server {
 		server.WithWriteTimeout(60*time.Second),
 	)
 
+	// Create connection pool
+	pool := connectionpool.NewTransportPool(connectionpool.DefaultPoolConfig())
+	poolMiddleware := connectionpool.NewConnectionPoolMiddleware(pool)
+
+	// Register global middleware
+	h.Use(
+		requestid.Middleware(nil),
+		security.Security(security.DefaultSecurityHeaders()),
+		security.CORS(security.DefaultCORSOptions()),
+		ratelimit.Middleware(ratelimit.DefaultMiddlewareOptions()),
+		poolMiddleware.Handle,
+	)
+
+	// Health check endpoint
 	h.GET("/health", func(c context.Context, ctx *app.RequestContext) {
 		ctx.JSON(consts.StatusOK, map[string]string{
 			"status": "ok",
 		})
 	})
 
+	// Root endpoint
 	h.GET("/", func(c context.Context, ctx *app.RequestContext) {
 		ctx.JSON(consts.StatusOK, map[string]string{
 			"service": "gateway-a",
@@ -36,9 +56,17 @@ func NewServer() *Server {
 		})
 	})
 
+	// LLM API routes
+	llmHandler := handler.NewLLMHandler()
+	v1 := h.Group("/v1")
+	{
+		v1.POST("/chat/completions", llmHandler.ChatCompletion)
+		v1.GET("/health", llmHandler.HealthCheck)
+	}
+
 	return &Server{
-		hertz:     h,
-		startTime: time.Now(),
+		hertz: h,
+		llmHandler: llmHandler,
 	}
 }
 

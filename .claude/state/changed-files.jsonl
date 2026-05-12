@@ -4,3 +4,11 @@
 {"file":".claude/settings.local.json","action":"Write","timestamp":"2026-05-12T06:46:12Z","important":false}
 {"file":"cmd/main.go","action":"Write","timestamp":"2026-05-12T07:00:03Z","important":false}
 {"file":"internal/server/server.go","action":"Write","timestamp":"2026-05-12T07:00:11Z","important":false}
+{"file":"internal/model/tenant.go","action":"Write","timestamp":"2026-05-12T07:47:22Z","important":false}
+{"file":"internal/model/usage.go","action":"Write","timestamp":"2026-05-12T07:47:28Z","important":false}
+{"file":"internal/model/api_key.go","action":"Write","timestamp":"2026-05-12T07:47:33Z","important":false}
+{"file":"internal/handler/llm.go","action":"Write","timestamp":"2026-05-12T07:47:51Z","important":false}
+{"file":"internal/handler/llm_client.go","action":"Write","timestamp":"2026-05-12T07:48:09Z","important":false}
+{"file":"internal/handler/helpers.go","action":"Write","timestamp":"2026-05-12T07:48:26Z","important":false}
+{"file":"pkg/database/database.go","action":"Edit","timestamp":"2026-05-12T07:48:46Z","important":false}
+{"file":"middleware/security/security.go","action":"Edit","timestamp":"2026-05-12T07:49:29Z","important":false}

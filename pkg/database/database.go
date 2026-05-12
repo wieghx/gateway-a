@@ -3,9 +3,11 @@ package database
 import (
 	"context"
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/gu/gateway-a/config"
+	"github.com/gu/gateway-a/internal/model"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -50,6 +52,17 @@ func InitDB(cfg *config.DatabaseConfig) (*gorm.DB, error) {
 		return nil, fmt.Errorf("invalid conn_max_lifetime: %w", err)
 	}
 	sqlDB.SetConnMaxLifetime(maxLifetime)
+
+	// Run auto migrations
+	log.Println("Running database migrations...")
+	if err := DB.AutoMigrate(
+		&model.Tenant{},
+		&model.APIKey{},
+		&model.UsageTrack{},
+	); err != nil {
+		return nil, fmt.Errorf("failed to run migrations: %w", err)
+	}
+	log.Println("Database migrations completed")
 
 	// Test connection
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)

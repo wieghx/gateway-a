@@ -158,7 +158,8 @@ func CORS(opts CORSOptions) app.HandlerFunc {
 
 			// Return 204 No Content for preflight
 			ctx.SetStatusCode(http.StatusNoContent)
-			ctx.Stop()
+			ctx.SetBodyString("")
+			ctx.Abort()
 			return
 		}
 
