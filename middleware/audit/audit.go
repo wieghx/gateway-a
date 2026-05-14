@@ -2,7 +2,7 @@ package audit
 
 import (
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 	"os"
 	"strings"
@@ -11,7 +11,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/app"
 	"go.uber.org/zap"
 
-	"github.com/gu/gateway-a/internal/logging"
+	"github.com/wieghx/gateway-a/internal/logging"
 )
 
 // AuditLogger handles audit logging for sensitive operations
@@ -138,7 +138,7 @@ func (f *FileAuditStore) writeLoop() {
 			return
 		}
 
-		data, err := json.MarshalIndent(buffer, "", "  ")
+		data, err := sonic.MarshalIndent(buffer, "", "  ")
 		if err != nil {
 			logging.Logger.Error("Failed to marshal audit events", zap.Error(err))
 			return
@@ -448,7 +448,7 @@ func Middleware(logger *AuditLogger, actions []string) app.HandlerFunc {
 		// Create audit event
 		var input map[string]interface{}
 		if len(requestBody) > 0 {
-			json.Unmarshal(requestBody, &input)
+			sonic.Unmarshal(requestBody, &input)
 		}
 
 		// Get user info from context
@@ -531,7 +531,7 @@ func ExtractRequestDetails(ctx *app.RequestContext) (string, map[string]interfac
 	// Try to parse request body
 	body := ctx.Request.BodyBytes()
 	if len(body) > 0 {
-		json.Unmarshal(body, &input)
+		sonic.Unmarshal(body, &input)
 	}
 
 	// Redact sensitive fields

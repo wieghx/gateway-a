@@ -32,3 +32,14 @@
 {"file":"middleware/circuitbreaker/circuit_test.go","action":"Edit","timestamp":"2026-05-12T08:51:43Z","important":false}
 {"file":"pkg/queue/queue_test.go","action":"Write","timestamp":"2026-05-12T08:53:06Z","important":false}
 {"file":"Plans.md","action":"Edit","timestamp":"2026-05-12T09:18:47Z","important":true}
+{"file":"go.mod","action":"Edit","timestamp":"2026-05-14T06:49:13Z","important":false}
+{"file":"internal/handler/helpers.go","action":"Edit","timestamp":"2026-05-14T06:52:46Z","important":false}
+{"file":"internal/handler/llm.go","action":"Edit","timestamp":"2026-05-14T06:52:56Z","important":false}
+{"file":"internal/handler/llm_client.go","action":"Edit","timestamp":"2026-05-14T06:53:01Z","important":false}
+{"file":"middleware/audit/audit.go","action":"Edit","timestamp":"2026-05-14T06:53:19Z","important":false}
+{"file":"pkg/queue/queue.go","action":"Edit","timestamp":"2026-05-14T06:53:27Z","important":false}
+{"file":"pkg/queue/handler.go","action":"Edit","timestamp":"2026-05-14T06:53:38Z","important":false}
+{"file":"wasm/exports.go","action":"Edit","timestamp":"2026-05-14T06:53:46Z","important":false}
+{"file":"wasm/plugin.go","action":"Edit","timestamp":"2026-05-14T06:53:56Z","important":false}
+{"file":"pkg/queue/queue_test.go","action":"Edit","timestamp":"2026-05-14T06:54:19Z","important":false}
+{"file":"tests/integration/docker_test.go","action":"Edit","timestamp":"2026-05-14T06:54:46Z","important":false}

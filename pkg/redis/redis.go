@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gu/gateway-a/config"
+	"github.com/wieghx/gateway-a/config"
 	"github.com/redis/go-redis/v9"
 )
 

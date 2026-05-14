@@ -9,7 +9,7 @@ import (
 
 	"github.com/cloudwego/hertz/pkg/app"
 
-	"github.com/gu/gateway-a/internal/logging"
+	"github.com/wieghx/gateway-a/internal/logging"
 )
 
 const (

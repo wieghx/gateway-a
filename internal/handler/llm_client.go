@@ -3,13 +3,13 @@ package handler
 import (
 	"bytes"
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 	"io"
 	"net/http"
 	"time"
 
-	"github.com/gu/gateway-a/middleware/circuitbreaker"
+	"github.com/wieghx/gateway-a/middleware/circuitbreaker"
 )
 
 // LLMClient handles proxying to upstream LLM providers
@@ -85,7 +85,7 @@ func (c *LLMClient) ChatCompletion(ctx context.Context, req *ChatCompletionReque
 
 	// Use circuit breaker to wrap the request
 	err = c.circuit.Call(ctx, func() error {
-		data, err := json.Marshal(req)
+		data, err := sonic.Marshal(req)
 		if err != nil {
 			return fmt.Errorf("failed to marshal request: %w", err)
 		}
@@ -111,7 +111,7 @@ func (c *LLMClient) ChatCompletion(ctx context.Context, req *ChatCompletionReque
 		}
 
 		var chatResp ChatCompletionResponse
-		if err := json.NewDecoder(resp.Body).Decode(&chatResp); err != nil {
+		if err := sonic.ConfigDefault.NewDecoder(resp.Body).Decode(&chatResp); err != nil {
 			return fmt.Errorf("failed to parse response: %w", err)
 		}
 
@@ -131,7 +131,7 @@ func (c *LLMClient) StreamChatCompletion(ctx context.Context, req *ChatCompletio
 	var err error
 
 	err = c.circuit.Call(ctx, func() error {
-		data, err := json.Marshal(req)
+		data, err := sonic.Marshal(req)
 		if err != nil {
 			return fmt.Errorf("failed to marshal request: %w", err)
 		}

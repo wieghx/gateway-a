@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gu/gateway-a/wasm"
+	"github.com/wieghx/gateway-a/wasm"
 )
 
 func TestPluginInput(t *testing.T) {

@@ -2,6 +2,7 @@ package handler
 
 import (
 	"context"
+	"github.com/bytedance/sonic"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -56,7 +57,7 @@ func (h *LLMHandler) ChatCompletion(c context.Context, ctx *app.RequestContext) 
 		Stream    bool            `json:"stream"`
 		MaxTokens int             `json:"max_tokens"`
 	}
-	if err := json.Unmarshal(rawBody, &req); err != nil {
+	if err := sonic.Unmarshal(rawBody, &req); err != nil {
 		ctx.JSON(consts.StatusBadRequest, map[string]string{"error": "Invalid request format"})
 		return
 	}
@@ -147,7 +148,7 @@ func (h *LLMHandler) nonStreamChatCompletion(c context.Context, ctx *app.Request
 // parseMessages converts json.RawMessage to Message slice
 func parseMessages(msg json.RawMessage) []Message {
 	var msgs []Message
-	if err := json.Unmarshal(msg, &msgs); err != nil {
+	if err := sonic.Unmarshal(msg, &msgs); err != nil {
 		return []Message{}
 	}
 	return msgs

@@ -2,7 +2,7 @@ package queue
 
 import (
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 	"strings"
 	"testing"
@@ -165,12 +165,12 @@ func TestJob(t *testing.T) {
 			MaxRetries: 3,
 		}
 
-		data, err := json.Marshal(job)
+		data, err := sonic.Marshal(job)
 		assert.NoError(t, err)
 
 		// Unmarshal back
 		var job2 Job
-		err = json.Unmarshal(data, &job2)
+		err = sonic.Unmarshal(data, &job2)
 		assert.NoError(t, err)
 		assert.Equal(t, job.ID, job2.ID)
 		assert.Equal(t, job.Type, job2.Type)
@@ -185,11 +185,11 @@ func TestJob(t *testing.T) {
 			MaxRetries: 3,
 		}
 
-		data, err := json.Marshal(job)
+		data, err := sonic.Marshal(job)
 		assert.NoError(t, err)
 
 		var job2 Job
-		err = json.Unmarshal(data, &job2)
+		err = sonic.Unmarshal(data, &job2)
 		assert.NoError(t, err)
 		assert.Empty(t, job2.Error)
 	})
@@ -668,11 +668,11 @@ func TestEdgeCases(t *testing.T) {
 			Payload: map[string]interface{}{},
 		}
 
-		data, err := json.Marshal(job)
+		data, err := sonic.Marshal(job)
 		assert.NoError(t, err)
 
 		var job2 Job
-		err = json.Unmarshal(data, &job2)
+		err = sonic.Unmarshal(data, &job2)
 		assert.NoError(t, err)
 		assert.Empty(t, job2.Payload)
 	})
@@ -684,11 +684,11 @@ func TestEdgeCases(t *testing.T) {
 			Metadata: nil,
 		}
 
-		data, err := json.Marshal(job)
+		data, err := sonic.Marshal(job)
 		assert.NoError(t, err)
 
 		var job2 Job
-		err = json.Unmarshal(data, &job2)
+		err = sonic.Unmarshal(data, &job2)
 		assert.NoError(t, err)
 		assert.Empty(t, job2.Metadata)
 	})
@@ -708,9 +708,9 @@ func BenchmarkJobMarshaling(b *testing.B) {
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		_, _ = json.Marshal(job)
+		_, _ = sonic.Marshal(job)
 		var j Job
-		_ = json.Unmarshal([]byte{}, &j)
+		_ = sonic.Unmarshal([]byte{}, &j)
 	}
 }
 

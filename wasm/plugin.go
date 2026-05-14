@@ -2,7 +2,7 @@ package wasm
 
 import (
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"errors"
 	"fmt"
 	"os"
@@ -268,7 +268,7 @@ func (r *Runtime) callOnRequest(m api.Module, fn api.Function, input *PluginInpu
 	}
 
 	// Marshal input to JSON
-	inputBytes, err := json.Marshal(input)
+	inputBytes, err := sonic.Marshal(input)
 	if err != nil {
 		return nil, fmt.Errorf("failed to marshal input: %w", err)
 	}
@@ -320,7 +320,7 @@ func (r *Runtime) callOnRequest(m api.Module, fn api.Function, input *PluginInpu
 	// Unmarshal output
 	var output PluginOutput
 	if len(outputBytes) > 0 {
-		if err := json.Unmarshal(outputBytes, &output); err != nil {
+		if err := sonic.Unmarshal(outputBytes, &output); err != nil {
 			return nil, fmt.Errorf("failed to unmarshal output: %w", err)
 		}
 	}
@@ -334,7 +334,7 @@ func (r *Runtime) callOnResponse(m api.Module, fn api.Function, output *PluginOu
 		return nil, nil
 	}
 
-	outputBytes, err := json.Marshal(output)
+	outputBytes, err := sonic.Marshal(output)
 	if err != nil {
 		return nil, fmt.Errorf("failed to marshal output: %w", err)
 	}
@@ -383,7 +383,7 @@ func (r *Runtime) callOnResponse(m api.Module, fn api.Function, output *PluginOu
 
 	var resultOutput PluginOutput
 	if len(resultBytes) > 0 {
-		if err := json.Unmarshal(resultBytes, &resultOutput); err != nil {
+		if err := sonic.Unmarshal(resultBytes, &resultOutput); err != nil {
 			return nil, fmt.Errorf("failed to unmarshal result: %w", err)
 		}
 	}
@@ -397,7 +397,7 @@ func (r *Runtime) callOnError(m api.Module, fn api.Function, input *ErrorInput) 
 		return nil, nil
 	}
 
-	inputBytes, err := json.Marshal(input)
+	inputBytes, err := sonic.Marshal(input)
 	if err != nil {
 		return nil, fmt.Errorf("failed to marshal error input: %w", err)
 	}
@@ -446,7 +446,7 @@ func (r *Runtime) callOnError(m api.Module, fn api.Function, input *ErrorInput) 
 
 	var output ErrorOutput
 	if len(outputBytes) > 0 {
-		if err := json.Unmarshal(outputBytes, &output); err != nil {
+		if err := sonic.Unmarshal(outputBytes, &output); err != nil {
 			return nil, fmt.Errorf("failed to unmarshal error output: %w", err)
 		}
 	}

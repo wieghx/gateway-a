@@ -6,8 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/gu/gateway-a/config"
-	"github.com/gu/gateway-a/internal/model"
+	"github.com/wieghx/gateway-a/config"
+	"github.com/wieghx/gateway-a/internal/model"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

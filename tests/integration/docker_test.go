@@ -5,7 +5,7 @@ package integration
 import (
 	"bytes"
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 	"io"
 	"net/http"
@@ -59,7 +59,7 @@ func (s *IntegrationTestSuite) TestHealthEndpoint() {
 	s.Require().NoError(err)
 
 	var result map[string]string
-	err = json.Unmarshal(body, &result)
+	err = sonic.Unmarshal(body, &result)
 	s.Require().NoError(err)
 
 	s.Equal("ok", result["status"])
@@ -81,7 +81,7 @@ func (s *IntegrationTestSuite) TestRootEndpoint() {
 	s.Require().NoError(err)
 
 	var result map[string]string
-	err = json.Unmarshal(body, &result)
+	err = sonic.Unmarshal(body, &result)
 	s.Require().NoError(err)
 
 	s.Equal("gateway-a", result["service"])
@@ -123,7 +123,7 @@ func (s *IntegrationTestSuite) TestLLMChatCompletion() {
 		"stream": false,
 	}
 
-	body, err := json.Marshal(requestBody)
+	body, err := sonic.Marshal(requestBody)
 	s.Require().NoError(err)
 
 	resp, err := s.httpClient.Post(
@@ -153,7 +153,7 @@ func (s *IntegrationTestSuite) TestQueueEnqueue() {
 		"max_retries": 3,
 	}
 
-	body, err := json.Marshal(requestBody)
+	body, err := sonic.Marshal(requestBody)
 	s.Require().NoError(err)
 
 	resp, err := s.httpClient.Post(
@@ -170,7 +170,7 @@ func (s *IntegrationTestSuite) TestQueueEnqueue() {
 		if resp.StatusCode == http.StatusOK {
 			// Verify response structure
 			var result map[string]interface{}
-			err := json.NewDecoder(resp.Body).Decode(&result)
+			err := sonic.NewDecoder(resp.Body).Decode(&result)
 			s.Require().NoError(err)
 			s.Contains(result, "job_id")
 			s.Equal("pending", result["status"])
@@ -190,7 +190,7 @@ func (s *IntegrationTestSuite) TestQueueJobStatus() {
 		"payload":  map[string]string{"test": "value"},
 	}
 
-	body, err := json.Marshal(requestBody)
+	body, err := sonic.Marshal(requestBody)
 	s.Require().NoError(err)
 
 	enqueueResp, err := s.httpClient.Post(
@@ -203,7 +203,7 @@ func (s *IntegrationTestSuite) TestQueueJobStatus() {
 		defer enqueueResp.Body.Close()
 		if enqueueResp.StatusCode == http.StatusOK {
 			var enqueueResult map[string]interface{}
-			err := json.NewDecoder(enqueueResp.Body).Decode(&enqueueResult)
+			err := sonic.ConfigDefault.NewDecoder(enqueueResp.Body).Decode(&enqueueResult)
 			if err == nil {
 				jobID, ok := enqueueResult["job_id"].(string)
 				if ok && jobID != "" {
@@ -238,7 +238,7 @@ func (s *IntegrationTestSuite) TestQueueListJobs() {
 	s.Require().NoError(err)
 
 	var result map[string]interface{}
-	err = json.Unmarshal(body, &result)
+	err = sonic.Unmarshal(body, &result)
 	s.Require().NoError(err)
 
 	s.Contains(result, "jobs")
@@ -262,7 +262,7 @@ func (s *IntegrationTestSuite) TestQueueStats() {
 	s.Require().NoError(err)
 
 	var result map[string]interface{}
-	err = json.Unmarshal(body, &result)
+	err = sonic.Unmarshal(body, &result)
 	s.Require().NoError(err)
 
 	s.Contains(result, "queue")

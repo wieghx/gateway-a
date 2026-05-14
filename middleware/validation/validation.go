@@ -12,7 +12,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"go.uber.org/zap"
 
-	"github.com/gu/gateway-a/internal/logging"
+	"github.com/wieghx/gateway-a/internal/logging"
 )
 
 // Validator performs request validation

@@ -10,11 +10,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/gu/gateway-a/config"
-	"github.com/gu/gateway-a/internal/logging"
-	"github.com/gu/gateway-a/internal/server"
-	"github.com/gu/gateway-a/pkg/database"
-	"github.com/gu/gateway-a/pkg/redis"
+	"github.com/wieghx/gateway-a/config"
+	"github.com/wieghx/gateway-a/internal/logging"
+	"github.com/wieghx/gateway-a/internal/server"
+	"github.com/wieghx/gateway-a/pkg/database"
+	"github.com/wieghx/gateway-a/pkg/redis"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

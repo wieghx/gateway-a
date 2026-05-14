@@ -6,7 +6,7 @@ import (
 
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
-	"github.com/gu/gateway-a/pkg/queue"
+	"github.com/wieghx/gateway-a/pkg/queue"
 )
 
 // QueueHandler handles queue API endpoints

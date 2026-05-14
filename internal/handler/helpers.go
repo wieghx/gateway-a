@@ -3,10 +3,10 @@ package handler
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 
-	"github.com/gu/gateway-a/internal/model"
+	"github.com/wieghx/gateway-a/internal/model"
 	"gorm.io/gorm"
 )
 
@@ -138,7 +138,7 @@ func checkQuota(tenantID uint, tokens int64) error {
 // parseOpenAIRequest parses an OpenAI-compatible request
 func parseOpenAIRequest(body []byte) (*ChatCompletionRequest, error) {
 	var req ChatCompletionRequest
-	if err := json.Unmarshal(body, &req); err != nil {
+	if err := sonic.Unmarshal(body, &req); err != nil {
 		return nil, err
 	}
 	return &req, nil

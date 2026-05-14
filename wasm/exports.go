@@ -2,7 +2,7 @@ package wasm
 
 import (
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 
 	"github.com/tetratelabs/wazero"
@@ -232,10 +232,10 @@ func ContextWithPluginOutput(ctx context.Context, output *PluginOutput) context.
 
 // JSONMarshal serializes data to JSON.
 func JSONMarshal(data interface{}) ([]byte, error) {
-	return json.Marshal(data)
+	return sonic.Marshal(data)
 }
 
 // JSONUnmarshal deserializes JSON to data.
 func JSONUnmarshal(data []byte, v interface{}) error {
-	return json.Unmarshal(data, v)
+	return sonic.Unmarshal(data, v)
 }

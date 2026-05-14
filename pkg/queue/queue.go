@@ -2,7 +2,7 @@ package queue
 
 import (
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 	"time"
 
@@ -92,7 +92,7 @@ func (q *TaskQueue) Enqueue(job *Job) error {
 		job.Timeout = q.config.DefaultTimeout
 	}
 
-	data, err := json.Marshal(job)
+	data, err := sonic.Marshal(job)
 	if err != nil {
 		return fmt.Errorf("failed to marshal job: %w", err)
 	}
@@ -117,7 +117,7 @@ func (q *TaskQueue) Dequeue(queueName string) (*Job, error) {
 
 	// result[0] is the key, result[1] is the job JSON
 	var job Job
-	if err := json.Unmarshal([]byte(result[1]), &job); err != nil {
+	if err := sonic.Unmarshal([]byte(result[1]), &job); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal job: %w", err)
 	}
 
@@ -156,7 +156,7 @@ func (q *TaskQueue) Fail(jobID, queueName string, err error) error {
 	}
 
 	// Update job state
-	data, err := json.Marshal(job)
+	data, err := sonic.Marshal(job)
 	if err != nil {
 		return fmt.Errorf("failed to marshal job: %w", err)
 	}
@@ -176,7 +176,7 @@ func (q *TaskQueue) Get(jobID, queueName string) (*Job, error) {
 	}
 
 	var job Job
-	if err := json.Unmarshal(data, &job); err != nil {
+	if err := sonic.Unmarshal(data, &job); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal job: %w", err)
 	}
 
@@ -197,7 +197,7 @@ func (q *TaskQueue) Start(jobID, queueName string) error {
 	job.Status = StatusRunning
 	job.StartedAt = now()
 
-	data, err := json.Marshal(job)
+	data, err := sonic.Marshal(job)
 	if err != nil {
 		return fmt.Errorf("failed to marshal job: %w", err)
 	}
@@ -315,7 +315,7 @@ func (q *TaskQueue) pubSubChannel(channel string) string {
 
 func (q *TaskQueue) moveToDLQ(ctx context.Context, job *Job) error {
 	dlqKey := "dlq:" + job.Queue
-	data, err := json.Marshal(job)
+	data, err := sonic.Marshal(job)
 	if err != nil {
 		return err
 	}

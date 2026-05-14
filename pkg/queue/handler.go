@@ -2,7 +2,7 @@ package queue
 
 import (
 	"context"
-	"encoding/json"
+	"github.com/bytedance/sonic"
 	"fmt"
 	"hash/fnv"
 	"time"
@@ -32,7 +32,7 @@ func TokenCalculationHandler(queue *TaskQueue) JobHandler {
 		zap.L().Info("processing token calculation", zap.String("job_id", job.ID))
 
 		// Payload is map[string]interface{}, extract and convert to JSON
-		payloadBytes, err := json.Marshal(job.Payload)
+		payloadBytes, err := sonic.Marshal(job.Payload)
 		if err != nil {
 			return fmt.Errorf("failed to marshal payload: %w", err)
 		}
@@ -43,7 +43,7 @@ func TokenCalculationHandler(queue *TaskQueue) JobHandler {
 			Response string `json:"response"`
 		}
 
-		if err := json.Unmarshal(payloadBytes, &payload); err != nil {
+		if err := sonic.Unmarshal(payloadBytes, &payload); err != nil {
 			return fmt.Errorf("failed to unmarshal payload: %w", err)
 		}
 
@@ -73,7 +73,7 @@ func UsageTrackingHandler(queue *TaskQueue) JobHandler {
 	return JobHandlerFunc(func(ctx context.Context, job *Job) error {
 		zap.L().Info("processing usage tracking", zap.String("job_id", job.ID))
 
-		payloadBytes, err := json.Marshal(job.Payload)
+		payloadBytes, err := sonic.Marshal(job.Payload)
 		if err != nil {
 			return fmt.Errorf("failed to marshal payload: %w", err)
 		}
@@ -84,7 +84,7 @@ func UsageTrackingHandler(queue *TaskQueue) JobHandler {
 			Tokens   int64  `json:"tokens"`
 		}
 
-		if err := json.Unmarshal(payloadBytes, &payload); err != nil {
+		if err := sonic.Unmarshal(payloadBytes, &payload); err != nil {
 			return fmt.Errorf("failed to unmarshal payload: %w", err)
 		}
 
@@ -104,7 +104,7 @@ func LLMCachingHandler() JobHandler {
 	return JobHandlerFunc(func(ctx context.Context, job *Job) error {
 		zap.L().Info("processing LLM caching", zap.String("job_id", job.ID))
 
-		payloadBytes, err := json.Marshal(job.Payload)
+		payloadBytes, err := sonic.Marshal(job.Payload)
 		if err != nil {
 			return fmt.Errorf("failed to marshal payload: %w", err)
 		}
@@ -116,7 +116,7 @@ func LLMCachingHandler() JobHandler {
 			Metadata   map[string]string `json:"metadata"`
 		}
 
-		if err := json.Unmarshal(payloadBytes, &payload); err != nil {
+		if err := sonic.Unmarshal(payloadBytes, &payload); err != nil {
 			return fmt.Errorf("failed to unmarshal payload: %w", err)
 		}
 
@@ -140,7 +140,7 @@ func TenantSyncHandler() JobHandler {
 	return JobHandlerFunc(func(ctx context.Context, job *Job) error {
 		zap.L().Info("processing tenant sync", zap.String("job_id", job.ID))
 
-		payloadBytes, err := json.Marshal(job.Payload)
+		payloadBytes, err := sonic.Marshal(job.Payload)
 		if err != nil {
 			return fmt.Errorf("failed to marshal payload: %w", err)
 		}
@@ -150,7 +150,7 @@ func TenantSyncHandler() JobHandler {
 			Action   string `json:"action"` // create, update, delete
 		}
 
-		if err := json.Unmarshal(payloadBytes, &payload); err != nil {
+		if err := sonic.Unmarshal(payloadBytes, &payload); err != nil {
 			return fmt.Errorf("failed to unmarshal payload: %w", err)
 		}
 
