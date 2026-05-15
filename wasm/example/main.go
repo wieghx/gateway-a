@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gu/gateway-a/wasm"
+	"github.com/wieghx/gateway-a/wasm"
 )
 
 func main() {

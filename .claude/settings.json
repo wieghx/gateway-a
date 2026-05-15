@@ -16,6 +16,10 @@
       "WebSearch"
     ]
   },
-  "sandbox": null,
+    "sandbox": {
+    "enabled": true,
+    "allowNetwork": false,
+    "allowFileWrite": true
+  },
   "env": {}
 }

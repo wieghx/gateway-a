@@ -43,3 +43,4 @@
 {"file":"wasm/plugin.go","action":"Edit","timestamp":"2026-05-14T06:53:56Z","important":false}
 {"file":"pkg/queue/queue_test.go","action":"Edit","timestamp":"2026-05-14T06:54:19Z","important":false}
 {"file":"tests/integration/docker_test.go","action":"Edit","timestamp":"2026-05-14T06:54:46Z","important":false}
+{"file":"README.md","action":"Write","timestamp":"2026-05-15T02:13:58Z","important":false}

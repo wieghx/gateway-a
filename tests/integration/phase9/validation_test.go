@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/gu/gateway-a/middleware/validation"
+	"github.com/wieghx/gateway-a/middleware/validation"
 )
 
 // TestValidator tests the request validator

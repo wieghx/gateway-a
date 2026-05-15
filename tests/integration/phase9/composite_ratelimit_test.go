@@ -10,7 +10,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gu/gateway-a/middleware/ratelimit"
+	"github.com/wieghx/gateway-a/middleware/ratelimit"
 )
 
 // TestCompositeRateLimiter tests the composite rate limiter
