@@ -72,9 +72,9 @@ func (r *TokenBucketRateLimiter) Check(ctx context.Context, key string) (*RateLi
 		last_update = now
 	end
 
-	-- Calculate tokens to add based on time elapsed
+	-- Calculate tokens to add based on time elapsed (elapsed is ms, rate is tokens/sec)
 	local elapsed = now - last_update
-	local tokensToAdd = elapsed * rate
+	local tokensToAdd = (elapsed / 1000.0) * rate
 	tokens = math.min(capacity, tokens + tokensToAdd)
 
 	-- Check if request is allowed
@@ -133,23 +133,17 @@ func (r *TokenBucketRateLimiter) Check(ctx context.Context, key string) (*RateLi
 	}, nil
 }
 
-// CheckWithConfig allows custom configuration per request
+// CheckWithConfig allows custom configuration per request (non-mutating)
 func (r *TokenBucketRateLimiter) CheckWithConfig(ctx context.Context, key string, rate, capacity int64, window time.Duration) (*RateLimitResult, error) {
-	oldRate := r.rate
-	oldCapacity := r.bucketSize
-	oldWindow := r.defaultWindow
-
-	r.rate = rate
-	r.bucketSize = capacity
-	r.defaultWindow = window
-
-	result, err := r.Check(ctx, key)
-
-	r.rate = oldRate
-	r.bucketSize = oldCapacity
-	r.defaultWindow = oldWindow
-
-	return result, err
+	// Create a temporary limiter instance to avoid mutating shared state (was a data race)
+	temp := &TokenBucketRateLimiter{
+		client:        r.client,
+		rate:          rate,
+		bucketSize:    capacity,
+		defaultWindow: window,
+		redisPrefix:   r.redisPrefix,
+	}
+	return temp.Check(ctx, key)
 }
 
 // Reset resets the rate limit bucket for a key
@@ -175,7 +169,7 @@ func (r *TokenBucketRateLimiter) GetTokens(ctx context.Context, key string) (flo
 
 	if stored_update ~= last_update then
 		local elapsed = now - stored_update
-		tokens = math.min(ARGV[4], tokens + elapsed * rate)
+		tokens = math.min(ARGV[4], tokens + (elapsed / 1000.0) * rate)
 		redis.call('HMSET', key, 'tokens', tokens, 'last_update', now)
 	end
 

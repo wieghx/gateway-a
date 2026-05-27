@@ -4,20 +4,23 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 	"strings"
 	"time"
 
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/app/server"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/wieghx/gateway-a/config"
 	"github.com/wieghx/gateway-a/internal/handler"
 	"github.com/wieghx/gateway-a/internal/metrics"
+	"github.com/wieghx/gateway-a/middleware/circuitbreaker"
 	"github.com/wieghx/gateway-a/middleware/connectionpool"
 	"github.com/wieghx/gateway-a/middleware/ratelimit"
 	"github.com/wieghx/gateway-a/middleware/requestid"
 	"github.com/wieghx/gateway-a/middleware/security"
 	"github.com/wieghx/gateway-a/pkg/queue"
-	"github.com/prometheus/client_golang/prometheus"
 )
 
 type Server struct {
@@ -28,9 +31,16 @@ type Server struct {
 	metrics    *metrics.Metrics
 }
 
-func NewServer() *Server {
+func NewServer(cfg *config.Config) *Server {
+	port := "8080"
+	if cfg != nil && cfg.Server.Port != "" {
+		port = cfg.Server.Port
+	} else if p := os.Getenv("PORT"); p != "" {
+		port = p
+	}
+
 	h := server.Default(
-		server.WithHostPorts(":8080"),
+		server.WithHostPorts(":" + port),
 		server.WithReadTimeout(60*time.Second),
 		server.WithWriteTimeout(60*time.Second),
 	)
@@ -39,6 +49,10 @@ func NewServer() *Server {
 	pool := connectionpool.NewTransportPool(connectionpool.DefaultPoolConfig())
 	poolMiddleware := connectionpool.NewConnectionPoolMiddleware(pool)
 
+	// Circuit breaker for upstream protection (registered globally for now)
+	cb := circuitbreaker.NewCircuitBreaker(circuitbreaker.DefaultCircuitBreakerConfig())
+	cbMiddleware := circuitbreaker.NewCircuitBreakerMiddleware(cb)
+
 	// Register global middleware
 	h.Use(
 		requestid.Middleware(nil),
@@ -46,6 +60,7 @@ func NewServer() *Server {
 		security.CORS(security.DefaultCORSOptions()),
 		ratelimit.Middleware(ratelimit.DefaultMiddlewareOptions()),
 		poolMiddleware.Handle,
+		cbMiddleware.Handle,
 	)
 
 	// Health check endpoint
@@ -63,16 +78,49 @@ func NewServer() *Server {
 		})
 	})
 
+	// Setup metrics early so we can wire it into handlers
+	m := metrics.NewMetrics()
+
 	// LLM API routes
-	llmHandler := handler.NewLLMHandler()
+	// Use env for upstream (config wiring can be improved later)
+	llmUpstream := "https://api.openai.com/v1"
+	llmKey := ""
+	maxRetries := 2
+	timeout := 2 * time.Minute
+
+	if cfg != nil {
+		if cfg.LLM.UpstreamURL != "" {
+			llmUpstream = cfg.LLM.UpstreamURL
+		}
+		llmKey = cfg.LLM.APIKey
+		if cfg.LLM.MaxRetries > 0 {
+			maxRetries = cfg.LLM.MaxRetries
+		}
+		if cfg.LLM.Timeout > 0 {
+			timeout = cfg.LLM.Timeout
+		}
+	} else {
+		// Fallback to env if no config provided
+		if u := os.Getenv("LLM_UPSTREAM_URL"); u != "" {
+			llmUpstream = u
+		}
+		llmKey = os.Getenv("LLM_API_KEY")
+		if r := os.Getenv("LLM_MAX_RETRIES"); r != "" {
+			fmt.Sscanf(r, "%d", &maxRetries)
+		}
+		if t := os.Getenv("LLM_TIMEOUT"); t != "" {
+			if d, err := time.ParseDuration(t); err == nil {
+				timeout = d
+			}
+		}
+	}
+
+	llmHandler := handler.NewLLMHandler(llmUpstream, llmKey, m, maxRetries, timeout)
 	v1 := h.Group("/v1")
 	{
 		v1.POST("/chat/completions", llmHandler.ChatCompletion)
 		v1.GET("/health", llmHandler.HealthCheck)
 	}
-
-	// Setup metrics
-	m := metrics.NewMetrics()
 
 	// Add metrics endpoint
 	h.GET("/metrics", func(c context.Context, ctx *app.RequestContext) {
@@ -128,15 +176,23 @@ func NewServer() *Server {
 		ctx.Response.SetBodyString(buf.String())
 	})
 
-	// Setup queue
+	// Setup queue (respect Redis envs for consistency with pkg/redis)
+	qHost := os.Getenv("REDIS_HOST")
+	if qHost == "" {
+		qHost = "localhost"
+	}
+	qPort := os.Getenv("REDIS_PORT")
+	if qPort == "" {
+		qPort = "6379"
+	}
 	queueConfig := queue.QueueConfig{
-		Host:         "localhost",
-		Port:         "6379",
-		DB:           0,
-		DefaultQueue: "default",
+		Host:           qHost,
+		Port:           qPort,
+		DB:             0,
+		DefaultQueue:   "default",
 		DefaultRetries: 3,
 		DefaultTimeout: 30 * time.Second,
-		PoolSize:     4,
+		PoolSize:       4,
 	}
 
 	var q *queue.TaskQueue

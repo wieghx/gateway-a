@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/spf13/viper"
 )
@@ -14,6 +15,7 @@ type Config struct {
 	Logging  LoggingConfig  `mapstructure:"logging"`
 	Redis    RedisConfig    `mapstructure:"redis"`
 	Database DatabaseConfig `mapstructure:"database"`
+	LLM      LLMConfig      `mapstructure:"llm"`
 }
 
 // ServerConfig holds server configuration
@@ -48,6 +50,14 @@ type DatabaseConfig struct {
 	ConnMaxLifetime string `mapstructure:"conn_max_lifetime"`
 }
 
+// LLMConfig holds upstream LLM provider configuration
+type LLMConfig struct {
+	UpstreamURL string        `mapstructure:"upstream_url"`
+	APIKey      string        `mapstructure:"api_key"` // optional gateway-level key
+	MaxRetries  int           `mapstructure:"max_retries"`
+	Timeout     time.Duration `mapstructure:"timeout"`
+}
+
 // DefaultConfig returns a configuration with default values
 func DefaultConfig() *Config {
 	return &Config{
@@ -73,6 +83,12 @@ func DefaultConfig() *Config {
 			MaxOpenConns:    25,
 			MaxIdleConns:    5,
 			ConnMaxLifetime: "5m",
+		},
+		LLM: LLMConfig{
+			UpstreamURL: "https://api.openai.com/v1",
+			APIKey:      "",
+			MaxRetries:  2,
+			Timeout:     2 * time.Minute,
 		},
 	}
 }
@@ -165,6 +181,22 @@ func loadFromEnv() *Config {
 	}
 	if sslMode := os.Getenv("DB_SSLMODE"); sslMode != "" {
 		cfg.Database.SSLMode = sslMode
+	}
+
+	// LLM upstream
+	if upstream := os.Getenv("LLM_UPSTREAM_URL"); upstream != "" {
+		cfg.LLM.UpstreamURL = upstream
+	}
+	if key := os.Getenv("LLM_API_KEY"); key != "" {
+		cfg.LLM.APIKey = key
+	}
+	if retries := os.Getenv("LLM_MAX_RETRIES"); retries != "" {
+		fmt.Sscanf(retries, "%d", &cfg.LLM.MaxRetries)
+	}
+	if timeoutStr := os.Getenv("LLM_TIMEOUT"); timeoutStr != "" {
+		if d, err := time.ParseDuration(timeoutStr); err == nil {
+			cfg.LLM.Timeout = d
+		}
 	}
 
 	return cfg

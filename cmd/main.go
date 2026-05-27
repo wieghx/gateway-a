@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/wieghx/gateway-a/config"
+	"github.com/wieghx/gateway-a/internal/handler"
 	"github.com/wieghx/gateway-a/internal/logging"
 	"github.com/wieghx/gateway-a/internal/server"
 	"github.com/wieghx/gateway-a/pkg/database"
@@ -73,10 +74,12 @@ func main() {
 			zap.String("port", cfg.Database.Port),
 			zap.String("dbname", cfg.Database.DBName),
 		)
+		// Wire DB to handlers (fixes auth/quota)
+		handler.SetDB(db)
 	}
 
-	// Initialize server
-	srv := server.NewServer()
+	// Initialize server with loaded config for proper LLM settings etc.
+	srv := server.NewServer(cfg)
 
 	// Setup graceful shutdown
 	shutdown := make(chan os.Signal, 1)

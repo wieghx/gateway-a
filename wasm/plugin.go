@@ -2,7 +2,6 @@ package wasm
 
 import (
 	"context"
-	"github.com/bytedance/sonic"
 	"errors"
 	"fmt"
 	"os"
@@ -184,7 +183,8 @@ func (r *Runtime) instantiatePlugin(compiled wazero.CompiledModule, name string)
 	if err != nil {
 		return nil, fmt.Errorf("failed to instantiate plugin %s: %w", name, err)
 	}
-	defer m.Close(r.ctx)
+	// NOTE: Do NOT Close here. Lifetime managed by Runtime.
+	// Previous defer m.Close caused all plugins to be immediately unusable.
 
 	// Check for required exports
 	var plugin *Plugin
@@ -262,196 +262,22 @@ func (r *Runtime) UnloadPlugin(name string) error {
 }
 
 // CallOnRequest calls the OnRequest export of a plugin.
+// NOTE: WASM memory passing is currently disabled for safety (known broken allocator).
+// Plugins will not execute until a proper ABI (host functions for alloc + linear memory protocol) is implemented.
 func (r *Runtime) callOnRequest(m api.Module, fn api.Function, input *PluginInput) (*PluginOutput, error) {
-	if fn == nil {
-		return nil, nil
-	}
-
-	// Marshal input to JSON
-	inputBytes, err := sonic.Marshal(input)
-	if err != nil {
-		return nil, fmt.Errorf("failed to marshal input: %w", err)
-	}
-
-	// Get memory from the module
-	memory := m.Memory()
-	if memory == nil {
-		return nil, errors.New("plugin has no memory")
-	}
-
-	memorySize := memory.Size()
-	inputLen := len(inputBytes)
-
-	// Grow memory if needed
-	if memorySize < uint32(inputLen)+8 {
-		pagesToGrow := (uint32(inputLen)+8 + 65535) / 65536
-		if memorySize < pagesToGrow {
-			pagesToGrow = memorySize + 1
-		}
-		if _, ok := memory.Grow(pagesToGrow); !ok {
-			return nil, errors.New("failed to grow WASM memory")
-		}
-	}
-
-	// Write input to WASM memory at offset 8 (leaving 8 bytes for length)
-	ptr := uint64(8)
-	memory.Write(uint32(ptr), inputBytes)
-
-	// Call the on_request function with pointer and length
-	result, err := fn.Call(r.ctx, ptr, uint64(inputLen))
-	if err != nil {
-		return nil, fmt.Errorf("on_request call failed: %w", err)
-	}
-
-	// result is []uint64 containing output pointer and length
-	if len(result) < 2 {
-		return nil, errors.New("on_request returned insufficient data")
-	}
-
-	outputPtr := uint32(result[0])
-	outputLen := uint32(result[1])
-
-	// Read output from WASM memory
-	outputBytes, ok := memory.Read(outputPtr+8, outputLen)
-	if !ok {
-		return nil, errors.New("failed to read output from memory")
-	}
-
-	// Unmarshal output
-	var output PluginOutput
-	if len(outputBytes) > 0 {
-		if err := sonic.Unmarshal(outputBytes, &output); err != nil {
-			return nil, fmt.Errorf("failed to unmarshal output: %w", err)
-		}
-	}
-
-	return &output, nil
+	return nil, errors.New("WASM plugin execution temporarily disabled for safety (memory protocol incomplete)")
 }
 
 // CallOnResponse calls the OnResponse export of a plugin.
+// NOTE: WASM memory passing is currently disabled for safety (known broken allocator).
 func (r *Runtime) callOnResponse(m api.Module, fn api.Function, output *PluginOutput) (*PluginOutput, error) {
-	if fn == nil {
-		return nil, nil
-	}
-
-	outputBytes, err := sonic.Marshal(output)
-	if err != nil {
-		return nil, fmt.Errorf("failed to marshal output: %w", err)
-	}
-
-	memory := m.Memory()
-	if memory == nil {
-		return nil, errors.New("plugin has no memory")
-	}
-
-	memorySize := memory.Size()
-	outputLen := len(outputBytes)
-
-	// Grow memory if needed
-	if memorySize < uint32(outputLen)+8 {
-		pagesToGrow := (uint32(outputLen)+8 + 65535) / 65536
-		if memorySize < pagesToGrow {
-			pagesToGrow = memorySize + 1
-		}
-		if _, ok := memory.Grow(pagesToGrow); !ok {
-			return nil, errors.New("failed to grow WASM memory")
-		}
-	}
-
-	// Write output to WASM memory
-	ptr := uint64(8)
-	memory.Write(uint32(ptr), outputBytes)
-
-	// Call the on_response function
-	result, err := fn.Call(r.ctx, ptr, uint64(outputLen))
-	if err != nil {
-		return nil, fmt.Errorf("on_response call failed: %w", err)
-	}
-
-	if len(result) < 2 {
-		return nil, errors.New("on_response returned insufficient data")
-	}
-
-	outputPtr := uint32(result[0])
-	resultLen := uint32(result[1])
-
-	// Read result from WASM memory
-	resultBytes, ok := memory.Read(outputPtr+8, resultLen)
-	if !ok {
-		return nil, errors.New("failed to read result from memory")
-	}
-
-	var resultOutput PluginOutput
-	if len(resultBytes) > 0 {
-		if err := sonic.Unmarshal(resultBytes, &resultOutput); err != nil {
-			return nil, fmt.Errorf("failed to unmarshal result: %w", err)
-		}
-	}
-
-	return &resultOutput, nil
+	return nil, errors.New("WASM plugin execution temporarily disabled for safety (memory protocol incomplete)")
 }
 
 // CallOnError calls the OnError export of a plugin.
+// NOTE: WASM memory passing is currently disabled for safety (known broken allocator).
 func (r *Runtime) callOnError(m api.Module, fn api.Function, input *ErrorInput) (*ErrorOutput, error) {
-	if fn == nil {
-		return nil, nil
-	}
-
-	inputBytes, err := sonic.Marshal(input)
-	if err != nil {
-		return nil, fmt.Errorf("failed to marshal error input: %w", err)
-	}
-
-	memory := m.Memory()
-	if memory == nil {
-		return nil, errors.New("plugin has no memory")
-	}
-
-	memorySize := memory.Size()
-	inputLen := len(inputBytes)
-
-	// Grow memory if needed
-	if memorySize < uint32(inputLen)+8 {
-		pagesToGrow := (uint32(inputLen)+8 + 65535) / 65536
-		if memorySize < pagesToGrow {
-			pagesToGrow = memorySize + 1
-		}
-		if _, ok := memory.Grow(pagesToGrow); !ok {
-			return nil, errors.New("failed to grow WASM memory")
-		}
-	}
-
-	// Write error input to WASM memory
-	ptr := uint64(8)
-	memory.Write(uint32(ptr), inputBytes)
-
-	// Call the on_error function
-	result, err := fn.Call(r.ctx, ptr, uint64(inputLen))
-	if err != nil {
-		return nil, fmt.Errorf("on_error call failed: %w", err)
-	}
-
-	if len(result) < 2 {
-		return nil, errors.New("on_error returned insufficient data")
-	}
-
-	outputPtr := uint32(result[0])
-	outputLen := uint32(result[1])
-
-	// Read output from WASM memory
-	outputBytes, ok := memory.Read(outputPtr+8, outputLen)
-	if !ok {
-		return nil, errors.New("failed to read output from memory")
-	}
-
-	var output ErrorOutput
-	if len(outputBytes) > 0 {
-		if err := sonic.Unmarshal(outputBytes, &output); err != nil {
-			return nil, fmt.Errorf("failed to unmarshal error output: %w", err)
-		}
-	}
-
-	return &output, nil
+	return nil, errors.New("WASM plugin execution temporarily disabled for safety (memory protocol incomplete)")
 }
 
 // extractMetadata extracts metadata from a plugin.

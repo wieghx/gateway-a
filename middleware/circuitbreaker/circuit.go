@@ -74,26 +74,22 @@ func (cb *CircuitBreaker) Call(ctx context.Context, fn func() error) error {
 
 	cb.totalRequests.Add(1)
 
-	// Execute the function with timeout
-	done := make(chan error, 1)
-	var err error
-
-	go func() {
-		done <- fn()
-	}()
-
-	select {
-	case <-ctx.Done():
+	// Execute directly. Check ctx before and after for cancellation (preserves observable timeout behavior for callers/tests).
+	if ctx.Err() != nil {
 		cb.recordFailure()
 		return ctx.Err()
-	case err = <-done:
-		if err != nil {
-			cb.recordFailure()
-		} else {
-			cb.recordSuccess()
-		}
-		return err
 	}
+	err := fn()
+	if ctx.Err() != nil {
+		cb.recordFailure()
+		return ctx.Err()
+	}
+	if err != nil {
+		cb.recordFailure()
+	} else {
+		cb.recordSuccess()
+	}
+	return err
 }
 
 // allowRequest checks if a request should be allowed based on current state

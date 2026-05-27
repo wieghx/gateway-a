@@ -2,10 +2,11 @@ package queue
 
 import (
 	"context"
-	"github.com/bytedance/sonic"
+	"crypto/rand"
 	"fmt"
 	"time"
 
+	"github.com/bytedance/sonic"
 	"github.com/redis/go-redis/v9"
 )
 
@@ -323,7 +324,10 @@ func (q *TaskQueue) moveToDLQ(ctx context.Context, job *Job) error {
 }
 
 func generateJobID() string {
-	return fmt.Sprintf("job_%d", time.Now().UnixNano())
+	// Include some randomness to reduce predictability
+	b := make([]byte, 4)
+	rand.Read(b) // best effort
+	return fmt.Sprintf("job_%d_%x", time.Now().UnixNano(), b)
 }
 
 func now() *time.Time {
